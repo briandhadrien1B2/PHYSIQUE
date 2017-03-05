@@ -17,7 +17,7 @@
 <body>
 
 <header class="header">
-<a href="../index.php"> <p>Organisation des cours</p></a>
+<a href="../index.php"><img src="../../img/house.svg" alt="" class="iconhome"></a>
 </header>
 
   <form  action="test.php" method="post" class="selectcours">
