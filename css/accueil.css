@@ -1,0 +1,270 @@
+body {
+    margin:0;
+    padding: 0;
+    background-color: white;
+    height: 100%;
+
+}
+
+.header {
+	height: 85px;
+	background-color: #3D4859;
+	
+}
+
+.bienvenue {
+
+}
+
+/* CONNEXION */ 
+
+.connexion {
+	padding-top: 2.5%;
+	margin-left: 60%;
+	height: 85px;
+}
+
+.connexion input {
+	outline: 0;
+}
+
+.pseudo {
+	height: 20px;
+	border: none;
+	border-bottom: solid 1px #27C79A;
+	background-color: #3D4859;
+	color: white;
+}
+
+.password {
+	height: 20px;
+	border: none;
+	border-bottom: solid 1px #27C79A;
+	background-color: #3D4859;
+	margin-left: 5%;
+	color: white;
+}
+
+
+.submit {
+	border: none;
+	color: white;
+	margin-left: 1.5%;
+	margin-right: 2%;
+	margin-top: -0.15%;
+	position: absolute;
+}
+
+
+
+
+/* PLACEHOLDER PSEUDO */
+.connexion input[type="text"]::-webkit-input-placeholder {
+color: white !important;
+}
+ 
+.connexion input[type="text"]:-moz-placeholder { /* Firefox 18- */
+color: white !important;  
+}
+ 
+.connexion input[type="text"]::-moz-placeholder {  /* Firefox 19+ */
+color: white !important;  
+}
+ 
+.connexion input[type="text"]:-ms-input-placeholder {  
+color: white !important;  
+}
+
+/* PLACEHOLDER PASSWORD */
+.connexion input[type="password"]::-webkit-input-placeholder {
+color: white !important;
+}
+ 
+.connexion input[type="password"]:-moz-placeholder { /* Firefox 18- */
+color: white !important;  
+}
+ 
+.connexion input[type="password"]::-moz-placeholder {  /* Firefox 19+ */
+color: white !important;  
+}
+ 
+.connexion input[type="password"]:-ms-input-placeholder {  
+color: white !important;  
+}
+
+
+.container {
+	display: flex;
+	flex-direction: row;
+}
+
+.left {
+	width: 50%;
+	height: 88.9vh;
+}
+
+.logo {
+	width: 80%;
+	margin-left: 10%;
+	margin-top: -10%;
+
+}
+
+.right {
+	width: 50%;
+	height: 88.9vh;
+	background-color: #27C79A;
+
+}
+
+.inscription {
+	margin-top: 10%;
+	margin-left: 25%;
+
+}
+
+.inscription input {
+	height: 60px;
+	text-align: center;
+	color: white;
+	outline: 0;
+}
+
+.nom {
+	border: none;
+	border-bottom: solid 1px #fff;
+	font-size: 14px;
+	background-color: transparent;
+}
+
+.prenom {
+	border: none;
+	border-bottom: solid 1px #fff;
+	font-size: 14px;
+	margin-left: 8%;
+	background-color: transparent;
+}
+
+.mail {
+	border: none;
+	border-bottom: solid 1px #fff;
+	font-size: 14px;
+	margin-left: 20%;
+	margin-top: 6%;
+	text-align: center;
+	background-color: transparent;
+}
+
+.pseudoinsc {
+	border: none;
+	border-bottom: solid 1px #fff;
+	font-size: 14px;
+	margin-left: 20%;
+	margin-top: 6%;
+	text-align: center;
+	background-color: transparent;
+}
+
+.passwordinsc {
+	border: none;
+	border-bottom: solid 1px #fff;
+	font-size: 14px;
+	margin-top: 6%;
+	background-color: transparent;
+}
+
+.passwordinsc2 {
+	border: none;
+	border-bottom: solid 1px #fff;
+	font-size: 14px;
+	margin-left: 8%;
+	background-color: transparent;
+}
+
+.classe {
+	border: none;
+	border-bottom: solid 1px #fff;
+	font-size: 14px;
+	margin-top: 6%;
+	background-color: transparent;
+}
+
+.classelist {
+	margin-top: 6%;
+	margin-left: 26%;
+	border-color: #fff;
+	height: 56px;
+	width: 20%;
+	border: none;
+	border-bottom: solid 1px #fff;
+	color: white;
+	background-color: transparent;
+	font-size: 14px;
+}
+
+select{text-align: center;}
+
+.valider {
+	margin-top: 7%;
+	margin-left: 28%;
+	border: none;
+}
+
+
+
+.inscription input[type="text"]::-webkit-input-placeholder {
+color: white !important;
+}
+ 
+.inscription input[type="text"]:-moz-placeholder { /* Firefox 18- */
+color: white !important;  
+}
+ 
+.inscription input[type="text"]::-moz-placeholder {  /* Firefox 19+ */
+color: white !important;  
+}
+ 
+.inscription input[type="text"]:-ms-input-placeholder {  
+color: white !important;  
+}
+
+/* PLACEHOLDER PASSWORD */
+.inscription input[type="password"]::-webkit-input-placeholder {
+color: white !important;
+}
+ 
+.inscription input[type="password"]:-moz-placeholder { /* Firefox 18- */
+color: white !important;  
+}
+ 
+.inscription input[type="password"]::-moz-placeholder {  /* Firefox 19+ */
+color: white !important;  
+}
+ 
+.inscription input[type="password"]:-ms-input-placeholder {  
+color: white !important;  
+}
+
+.inscription input[type="email"]::-webkit-input-placeholder {
+color: white !important;
+}
+ 
+.inscription input[type="email"]:-moz-placeholder { /* Firefox 18- */
+color: white !important;  
+}
+ 
+.inscription input[type="email"]::-moz-placeholder {  /* Firefox 19+ */
+color: white !important;  
+}
+ 
+.inscription input[type="email"]:-ms-input-placeholder {  
+color: white !important;  
+}
+
+.txt {
+	text-align: center;
+	margin-left: 10%;
+	margin-right: 10%;
+	margin-top: -10%;
+	font-size: 1rem;
+}

@@ -1,0 +1,95 @@
+body {
+	margin: 0;
+	padding: 0;
+	background-color: #fff;
+	color: black;
+}
+ 
+header {
+    background-color: #27C79A;
+    height: 10%;
+    padding: 20px;
+    display: flex;
+}
+
+header {
+    
+    background: #27C79A;
+    height: 10%;
+    padding: 20px;
+    display: flex;
+}
+
+.header a {
+    color:white;
+    padding-right: 5%;
+    display: flex;
+    align-items: center;
+    font-size: 1.6rem;
+    padding: 20px;
+}
+
+.header a:hover {
+    background: white;
+    color:#27C79A;
+}
+
+.container {
+	width: 100%;
+	margin-top: 2%;
+
+}
+
+.ta-editor {
+  min-height: 300px;
+  height: auto;
+  overflow: auto;
+  font-family: inherit;
+  font-size: 100%;
+  border-color: #3D4859;
+  border-radius: 0px;
+
+}
+
+.ta-toolbar {
+  background-color: #3D4859;
+}
+
+.btn-default {
+  background-color: #3D4859;
+  color: white;
+  border: none;
+}
+
+.btn-toolbar .btn-group {
+    float: none;
+}
+
+.btn-group>.btn, .btn-group-vertical>.btn {
+    position: relative;
+    float: none;
+}
+
+.selectcours {
+	margin-top: 2%;
+}
+
+.titrecours {
+  margin-left: 45%;
+}
+
+.listcours {
+  margin-left: 50%;
+  margin-top: -2.4%;
+}
+
+#formhtml {
+	margin-top: 5%;
+	min-height: 100px;
+
+}
+
+.btn-envoyez {
+  margin-left: 48%;
+  margin-top: 1%;
+}

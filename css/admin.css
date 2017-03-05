@@ -1,0 +1,275 @@
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background-color: #fff;
+}
+
+header {
+    background-color: #27C79A;
+    height: 6%;
+    padding: 20px;
+    display: flex;
+}
+
+
+
+
+.iconhome {
+    width: 45px;
+    height: auto;
+}
+
+.iconeditor {
+    width: 50px;
+    height: auto;
+    margin-left: 60%;
+}
+
+.iconeditor:hover {
+}
+
+.iconlogout {
+    margin-left: 120%;
+    width: 50px;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    height: auto;
+}
+
+#colonne1 {
+    background-color: #3D4859;
+    width: 33.33%;
+    color: white;
+
+}
+
+#centre {
+    background-color: #49576C;
+    width: 33.33%;
+    color: white;
+}
+
+#colonne2 {
+    background-color: #F5F7F9;
+    width: 33.33%;
+}
+
+.titre {
+    width: 99%;
+    height: auto;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.titre2 {
+    width: 99%;
+    height: auto;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.titreajout {
+    width: 100%;
+    text-align: center;
+    border: solid 2px red;
+    height: auto;
+}
+
+.ajout-theme {
+    margin-top: 10%;
+}
+
+
+
+.input-titre {
+    background-color: transparent;
+    border-radius: 8px;
+    border: solid 1px white;
+    width: 60%;
+    height: 40px;
+    text-align: center;
+    font-size: 14px;
+    margin-left: 20%;
+    color: white;
+    outline: 0;
+
+}
+
+.input-lien {
+    margin-top: 5%;
+    background-color: transparent;
+    border-radius: 8px;
+    border: solid 1px white;
+    width: 60%;
+    height: 40px;
+    text-align: center;
+    font-size: 14px;
+    margin-left: 20%;
+    color: white;
+    outline: 0;
+}
+
+.submit {
+    margin-top: 5%;
+    width: 85%;
+    height: 40px;
+    background-color: white;
+    color: black;
+    cursor: pointer;
+    text-transform: uppercase;
+    border: solid 1px black;
+    margin-left: 6%;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.nom-theme {
+    text-align: center;
+    color: white;
+    margin-top: 15%;
+}
+
+
+.img-edit {
+    width: 30px;
+    height: 20px;
+    margin-left: 20%;
+    margin-top: 2%;
+}
+
+.img-remove {
+    width: 30px;
+    height: 20px;
+    margin-left: 3%;
+}
+
+
+.ajout-theme input[type="text"]::-webkit-input-placeholder {
+color: white !important;
+}
+ 
+.ajout-theme input[type="text"]:-moz-placeholder { /* Firefox 18- */
+color: white !important;  
+}
+ 
+.ajout-theme input[type="text"]::-moz-placeholder {  /* Firefox 19+ */
+color: white !important;  
+}
+ 
+.ajout-theme input[type="text"]:-ms-input-placeholder {  
+color: white !important;  
+}
+
+
+.nom-chapitre {
+    text-align: center;
+    color: white;
+    margin-top: 15%;
+}
+
+.nom-cours {
+    text-align: center;
+    color: black;
+    margin-top: 15%;
+}
+
+.ajout-chapitre {
+    margin-top: 10%;
+}
+
+.ajout-chapitre input[type="text"]::-webkit-input-placeholder {
+color: white !important;
+}
+ 
+.ajout-chapitre input[type="text"]:-moz-placeholder { /* Firefox 18- */
+color: white !important;  
+}
+ 
+.ajout-chapitre input[type="text"]::-moz-placeholder {  /* Firefox 19+ */
+color: white !important;  
+}
+ 
+.ajout-chapitre input[type="text"]:-ms-input-placeholder {  
+color: white !important;  
+}
+
+
+.ajout-cours {
+    margin-top: 10%;
+}
+
+.ajout-cours input[type="text"]::-webkit-input-placeholder {
+color: black !important;
+}
+ 
+.ajout-cours input[type="text"]:-moz-placeholder { /* Firefox 18- */
+color: black !important;  
+}
+ 
+.ajout-cours input[type="text"]::-moz-placeholder {  /* Firefox 19+ */
+color: black !important;  
+}
+ 
+.ajout-cours input[type="text"]:-ms-input-placeholder {  
+color: black !important;  
+}
+
+
+.input-titre-cours {
+    background-color: transparent;
+    border-radius: 8px;
+    border: solid 1px black;
+    width: 60%;
+    height: 40px;
+    text-align: center;
+    font-size: 14px;
+    margin-left: 20%;
+    color: black;
+    outline: 0;
+    margin-top: 10%;
+
+}
+
+
+.link-theme-titre {
+    text-align: center;
+}
+
+.link-chapitre-titre {
+    text-align: center;
+}
+
+.link-theme {
+    margin-left: 37%;
+}
+
+.link-chapitre {
+    margin-left: 37%;
+}
+
+.url {
+    text-align: center;
+}
+
+.urltext {
+    margin-left: 37%;
+}
+
+
+.submit-cours {
+    margin-top: 5%;
+    width: 85%;
+    height: 40px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    text-transform: uppercase;
+    border: solid 1px black;
+    margin-left: 6%;
+    border-radius: 8px;
+    font-size: 14px;
+}
