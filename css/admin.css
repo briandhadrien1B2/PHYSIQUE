@@ -181,6 +181,20 @@ color: white !important;
     margin-top: 10%;
 }
 
+.link-theme-chap {
+    margin-left: 35%;
+}
+
+.id-cours {
+    text-align: center;
+}
+
+.idtext {
+    border: solid 1px black;
+    height: 25px;
+    margin-left: 35%;
+}
+
 .ajout-chapitre input[type="text"]::-webkit-input-placeholder {
 color: white !important;
 }
@@ -257,6 +271,8 @@ color: black !important;
 
 .urltext {
     margin-left: 37%;
+    border: solid 1px black;
+    height: 25px;
 }
 
 
