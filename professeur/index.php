@@ -1,26 +1,90 @@
-<!--
-P R O F S
-vu des cours et ajouts
--->
-
 <?php
-session_start();
-
-if ($_SESSION['pseudo'] != "admin")
-	{
-	 echo '<meta http-equiv="refresh" content="0; URL=../index.php"> ';;
-	}
-  else
-	{
-
 include 'traitement/bdd.php';
 ?>
-
+<!DOCTYPE html>
 <html>
-<head>
+	<meta charset="UTF-8">
+	<link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="../css/admin.css">
-</head>
+<head>
+<script>
 
+
+function showUser(str) {
+	console.log(str);
+	document.getElementById("txtHintt").innerHTML="";
+		    document.getElementById("txtHinttt").innerHTML="";
+
+  if (str=="") {
+    document.getElementById("txtHint").innerHTML="";
+    return;
+  }
+  if (window.XMLHttpRequest) {
+    xmlhttp=new XMLHttpRequest();
+  } else {
+    xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+  xmlhttp.onreadystatechange=function() {
+    if (this.readyState==4 && this.status==200) {
+      document.getElementById("txtHint").innerHTML=this.responseText;
+    }
+  }
+  xmlhttp.open("GET","traitement/cours/getuser.php?q="+str,true);
+  xmlhttp.send();
+}
+
+
+
+function showUser2(strr) {
+	console.log(strr);
+		document.getElementById("txtHinttt").innerHTML="";
+  if (strr=="c'est vide wesh") {
+	document.getElementById("txtHintt").innerHTML="";
+    return;
+  }
+  if (window.XMLHttpRequest) {
+    // code for IE7+, Firefox, Chrome, Opera, Safari
+    xmlhttp=new XMLHttpRequest();
+  } else { // code for IE6, IE5
+    xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+  xmlhttp.onreadystatechange=function() {
+    if (this.readyState==4 && this.status==200) {
+      document.getElementById("txtHintt").innerHTML=this.responseText;
+    }
+  }
+  xmlhttp.open("GET","traitement/cours/getuser2.php?e="+strr,true);
+  xmlhttp.send();
+}
+
+function showUser3(strrr) {
+	console.log(strrr);
+	    document.getElementById("txtHinttt").innerHTML="";
+  if (strrr=="c'est vide wesh") {
+
+    return;
+  }
+  if (window.XMLHttpRequest) {
+    // code for IE7+, Firefox, Chrome, Opera, Safari
+    xmlhttp=new XMLHttpRequest();
+  } else { // code for IE6, IE5
+    xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+  xmlhttp.onreadystatechange=function() {
+    if (this.readyState==4 && this.status==200) {
+      document.getElementById("txtHinttt").innerHTML=this.responseText;
+    }
+  }
+  xmlhttp.open("GET","traitement/cours/getuser3.php?f="+strrr,true);
+  xmlhttp.send();
+}
+
+
+
+
+</script>
+
+</head>
 <body>
 <header class="header">
 	<a href="index.php"><img src="../img/house.svg" alt="" class="iconhome"></a>
@@ -29,26 +93,23 @@ include 'traitement/bdd.php';
 </header>
 <div class="container">
 <div id="colonne1">
-	<div class="titre2">
-	<p>Thème</p>
-	</div>
+<form>
+<ul>
 
-	<?php
-	$reponse = $bdd->query('SELECT * FROM theme'); //affichage des themes present dans la BDD
-	while ($donnees = $reponse->fetch())
-		{
-		$id = htmlspecialchars($donnees['id']);
-		echo ('<p class="nom-theme">' . $donnees['titre'] . '</p>');
-		echo ('<br />');
-		echo ('<a class="img-edit" href="" ><img src="../img/edit.svg" class="img-edit" alt=""></a>');
-		echo ('<a class="img-remove" href="traitement/delect/SupressionTheme.php?id=' . $id . '" ><img src="../img/remove.svg" class="img-remove" alt=""></a>');
-		echo ('<br />');
-		}
+<?php
 
+$reponse = $bdd->query('SELECT * FROM theme');
+while ($donnees = $reponse->fetch())
+{
+	echo('<li id="mdr" name="users" onclick="showUser(this.value)" value="' . $donnees['lien'] . '">' . $donnees['titre'] . '</li>' );
+	echo('<br>');
+	echo ('<a class="img-edit" href="" ><img src="../img/edit.svg" class="img-edit" alt=""></a>');
+	echo ('<a class="img-remove" href="traitement/delect/SupressionTheme.php?id=' . $donnees['id'] . '" ><img src="../img/remove.svg" class="img-remove" alt=""></a>');
+}
 ?>
 
 
-
+</form>
 <form action="traitement/add/ajoutTheme.php" method="post" class="ajout-theme">
 	<input type="text" name="titre" placeholder="Titre" class="input-titre">
 	<br />
@@ -56,117 +117,18 @@ include 'traitement/bdd.php';
 	<br />
 	<input class="submit" type="submit" value="Créer le Theme">
 </form>
+
 </div>
+<div id="txtHint"><b></b></div>
 
-<div id="centre">
-	<div class="titre">
-		<p>Chapitre</p>
-	</div>
+<div id="txtHintt" ><b></b></div>
 
-	<?php
-	$reponse = $bdd->query('SELECT * FROM chapitre'); //affichage des themes present dans la BDD
-	while ($donnees = $reponse->fetch())
-		{
-		$id = htmlspecialchars($donnees['id']);
-		echo ('<p class="nom-chapitre">' . $donnees['titre'] . '</p>');
-		echo ('<br />');
-		echo ('<a class="img-edit" href="" ><img src="../img/edit.svg" class="img-edit" alt=""></a>');
-		echo ('<a class="img-remove" href="traitement/delect/SupressionChapitre.php?id=' . $id . '" ><img src="../img/remove.svg" class="img-remove" alt=""></a>');
-		echo ('<br />');
-		}
-
-?>
-
-
-<form action="traitement/add/ajoutchapitre.php" method="post" class="ajout-chapitre">
-	<input type="text" name="titre" placeholder="Titre" class="input-titre">
-	<br />
-	  <p class="link-theme-titre">Lien vers theme :</p>
-	  	<select name="lien" class="link-theme-chap">
-	  <?php
-	$lientheme = $bdd->query('SELECT * FROM theme'); //affichage des themes present dans la BDD
-	while ($donnees = $lientheme->fetch())
-		{
-		$lien = $donnees['lien'];
-		echo ('<option value=" ' . $lien . '">' . $donnees['titre'] . '</option>');
-		}
-
-?>
-		</select><br />
-			  <p class="id-cours">Id des cours :</p>
-	<input type="text" name="lienchapitre" placeholder="Id cours" class="idtext">
-	<br />
-	<br />
-	<input class="submit" type="submit" value="Créer le Chapitre">
-	</form>
-</div>
-
-<div id="colonne2">
-	<div class="titre">
-	<p>Cours</p>
-	</div>
-
-
-
-
-
-	<?php
-	$reponse = $bdd->query('SELECT * FROM cours'); //affichage des themes present dans la BDD
-	while ($donnees = $reponse->fetch())
-		{
-		$id = htmlspecialchars($donnees['id']);
-		echo ('<p class="nom-cours">' . $donnees['titre'] . '</p>');
-		echo ('<br />');
-		echo ('<a class="img-edit" href="" ><img src="../img/edit-black.svg" class="img-edit" alt=""></a>');
-		echo ('<a class="img-remove" href="traitement/delect/SupressionCours.php?id=' . $id . '" ><img src="../img/remove-black.svg" class="img-remove" alt=""></a>');
-		echo ('<br />');
-		}
-
-?>
-
-<form action="traitement/add/ajoutcours.php" method="post">
-	<input type="text" name="titre" placeholder="Titre" class="input-titre-cours">
-	<br />
-	  <p class="link-theme-titre">Lien du Theme : </p>
-	  	<select name="lien" class="link-theme">
-	  <?php
-	$lientheme = $bdd->query('SELECT * FROM theme'); //affichage des themes present dans la BDD
-	while ($donnees = $lientheme->fetch())
-		{
-		$lien = $donnees['lien'];
-		echo ('<option value=" ' . $lien . '">' . $donnees['titre'] . '</option>');
-		}
-
-?>
-		</select>	<br />
-	<p class="link-chapitre-titre">Lien vers Chapitre :</p>
-		  	<select class="link-chapitre" name="liencours2">
-	  <?php
-	$lien = $bdd->query('SELECT * FROM chapitre'); //affichage des themes present dans la BDD
-	while ($donnees = $lien->fetch())
-		{
-		$liens = $donnees['lienchapitre'];
-		echo ('<option value=" ' . $liens . '">' . $donnees['titre'] . '</option>');
-		}
-
-?>
-		</select>
-
-	<br />
-	  <p class="url">URL du cours :</p>
-	<input type="text" name="url" placeholder="URL ICI" class="urltext">
-	<br />
-	<input class="submit-cours" type="submit" value="Créer le cours">
-</form>
+<div id="txtHinttt" ><b></b>
 </div>
 
 </div>
+
+
 
 </body>
 </html>
-
-<?php
-
-}
-
-?>

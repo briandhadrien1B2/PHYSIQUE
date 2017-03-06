@@ -1,6 +1,7 @@
 <?php
 include '../bdd.php';
 
+
 $sql = $bdd->prepare('SELECT lien FROM chapitre WHERE lienchapitre = \''.$_POST['lienchapitre'].'\' ;');
 $sql->execute();
 $res = $sql->fetch();
