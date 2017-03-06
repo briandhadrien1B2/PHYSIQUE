@@ -49,8 +49,8 @@ li {
     background-color: #3D4859;
     width: 33.33%;
     color: white;
-    min-height: 87.3vh;
-    max-height: 87.3vh;
+    min-height: 87.7vh;
+    max-height: 87.7vh;
     overflow: scroll;
 
 }
@@ -59,7 +59,8 @@ li {
     background-color: #49576C;
     width: 33.33%;
     color: white;
-    height: 87.3vh;
+    min-height: 87.7vh;
+    max-height: 87.7vh;
     overflow: scroll;
 }
 
@@ -67,16 +68,21 @@ li {
     background-color: #F5F7F9;
     width: 33.33%;
     height: 87.3vh;
+    min-height: 87.7vh;
+    max-height: 87.7vh;
     overflow: scroll;
 }
 
 .titre {
-    width: 99%;
-    height: auto;
-    text-align: center;
+    width: 30%;
+    height: 38px;
     text-transform: uppercase;
     margin-top: 10%;
-    text-decoration: underline;
+    background-color: white;
+    color: black;
+    padding-top: 10px;
+    text-align: center;
+    margin-left: 30%;
 }
 
 .titre2 {
@@ -107,7 +113,7 @@ li {
     height: 40px;
     text-align: center;
     font-size: 14px;
-    margin-left: 20%;
+    margin-left: 15%;
     color: white;
     outline: 0;
 
@@ -136,7 +142,7 @@ li {
     cursor: pointer;
     text-transform: uppercase;
     border: solid 1px black;
-    margin-left: 6%;
+    margin-left: 3%;
     border-radius: 8px;
     font-size: 14px;
 }
@@ -151,7 +157,7 @@ li {
 .img-edit {
     width: 30px;
     height: 20px;
-    margin-left: 20%;
+    margin-left: 17%;
     margin-top: 0%;
 }
 

@@ -116,7 +116,7 @@ while ($donnees = $reponse->fetch()) {
 
 
 </form>
-<hr width="50%" color="white">
+<!-- <hr width="50%" color="white"> -->
 <form action="traitement/add/ajoutTheme.php" method="post" class="ajout-theme">
 	<input type="text" name="titre" placeholder="Titre" class="input-titre">
 	<br />
