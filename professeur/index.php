@@ -4,6 +4,15 @@ vu des cours et ajouts
 -->
 
 <?php
+session_start();
+
+if ($_SESSION['pseudo'] != "admin")
+	{
+	 echo '<meta http-equiv="refresh" content="0; URL=../index.php"> ';;
+	}
+  else
+	{
+
 include 'traitement/bdd.php';
 ?>
 
@@ -23,19 +32,18 @@ include 'traitement/bdd.php';
 	<div class="titre2">
 	<p>Thème</p>
 	</div>
-	
-	<?php
-$reponse = $bdd->query('SELECT * FROM theme'); //affichage des themes present dans la BDD
 
-while ($donnees = $reponse->fetch())
-	{
-	$id = htmlspecialchars($donnees['id']);
-	echo ('<p class="nom-theme">' . $donnees['titre'] . '</p>');
-	echo ('<br />');
-	echo ('<a class="img-edit" href="" ><img src="../img/edit.svg" class="img-edit" alt=""></a>');
-	echo ('<a class="img-remove" href="traitement/delect/SupressionTheme.php?id=' . $id .'" ><img src="../img/remove.svg" class="img-remove" alt=""></a>');
-	echo ('<br />');
-	}
+	<?php
+	$reponse = $bdd->query('SELECT * FROM theme'); //affichage des themes present dans la BDD
+	while ($donnees = $reponse->fetch())
+		{
+		$id = htmlspecialchars($donnees['id']);
+		echo ('<p class="nom-theme">' . $donnees['titre'] . '</p>');
+		echo ('<br />');
+		echo ('<a class="img-edit" href="" ><img src="../img/edit.svg" class="img-edit" alt=""></a>');
+		echo ('<a class="img-remove" href="traitement/delect/SupressionTheme.php?id=' . $id . '" ><img src="../img/remove.svg" class="img-remove" alt=""></a>');
+		echo ('<br />');
+		}
 
 ?>
 
@@ -56,17 +64,16 @@ while ($donnees = $reponse->fetch())
 	</div>
 
 	<?php
-$reponse = $bdd->query('SELECT * FROM chapitre'); //affichage des themes present dans la BDD
-
-while ($donnees = $reponse->fetch())
-	{
-	$id = htmlspecialchars($donnees['id']);
-	echo ('<p class="nom-chapitre">' . $donnees['titre'] . '</p>');
-	echo ('<br />');
-	echo ('<a class="img-edit" href="" ><img src="../img/edit.svg" class="img-edit" alt=""></a>');
-	echo ('<a class="img-remove" href="traitement/delect/SupressionTheme.php?id=' . $id .'" ><img src="../img/remove.svg" class="img-remove" alt=""></a>');
-	echo ('<br />');
-	}
+	$reponse = $bdd->query('SELECT * FROM chapitre'); //affichage des themes present dans la BDD
+	while ($donnees = $reponse->fetch())
+		{
+		$id = htmlspecialchars($donnees['id']);
+		echo ('<p class="nom-chapitre">' . $donnees['titre'] . '</p>');
+		echo ('<br />');
+		echo ('<a class="img-edit" href="" ><img src="../img/edit.svg" class="img-edit" alt=""></a>');
+		echo ('<a class="img-remove" href="traitement/delect/SupressionTheme.php?id=' . $id . '" ><img src="../img/remove.svg" class="img-remove" alt=""></a>');
+		echo ('<br />');
+		}
 
 ?>
 
@@ -77,13 +84,12 @@ while ($donnees = $reponse->fetch())
 	  <p class="link-theme-titre">Lien vers theme :</p>
 	  	<select name="lien" class="link-theme-chap">
 	  <?php
-$lientheme = $bdd->query('SELECT * FROM theme'); //affichage des themes present dans la BDD
-
-while ($donnees = $lientheme->fetch())
-	{
-	$lien = $donnees['lien'];
-	echo ('<option value=" ' . $lien . '">' . $donnees['titre'] . '</option>');
-	}
+	$lientheme = $bdd->query('SELECT * FROM theme'); //affichage des themes present dans la BDD
+	while ($donnees = $lientheme->fetch())
+		{
+		$lien = $donnees['lien'];
+		echo ('<option value=" ' . $lien . '">' . $donnees['titre'] . '</option>');
+		}
 
 ?>
 		</select><br />
@@ -105,17 +111,16 @@ while ($donnees = $lientheme->fetch())
 
 
 	<?php
-$reponse = $bdd->query('SELECT * FROM cours'); //affichage des themes present dans la BDD
-
-while ($donnees = $reponse->fetch())
-	{
-	$id = htmlspecialchars($donnees['id']);
-	echo ('<p class="nom-cours">' . $donnees['titre'] . '</p>');
-	echo ('<br />');
-	echo ('<a class="img-edit" href="" ><img src="../img/edit-black.svg" class="img-edit" alt=""></a>');
-	echo ('<a class="img-remove" href="traitement/delect/SupressionTheme.php?id=' . $id .'" ><img src="../img/remove-black.svg" class="img-remove" alt=""></a>');
-	echo ('<br />');
-	}
+	$reponse = $bdd->query('SELECT * FROM cours'); //affichage des themes present dans la BDD
+	while ($donnees = $reponse->fetch())
+		{
+		$id = htmlspecialchars($donnees['id']);
+		echo ('<p class="nom-cours">' . $donnees['titre'] . '</p>');
+		echo ('<br />');
+		echo ('<a class="img-edit" href="" ><img src="../img/edit-black.svg" class="img-edit" alt=""></a>');
+		echo ('<a class="img-remove" href="traitement/delect/SupressionTheme.php?id=' . $id . '" ><img src="../img/remove-black.svg" class="img-remove" alt=""></a>');
+		echo ('<br />');
+		}
 
 ?>
 
@@ -125,26 +130,24 @@ while ($donnees = $reponse->fetch())
 	  <p class="link-theme-titre">Lien du Theme : </p>
 	  	<select name="lien" class="link-theme">
 	  <?php
-$lientheme = $bdd->query('SELECT * FROM theme'); //affichage des themes present dans la BDD
-
-while ($donnees = $lientheme->fetch())
-	{
-	$lien = $donnees['lien'];
-	echo ('<option value=" ' . $lien . '">' . $donnees['titre'] . '</option>');
-	}
+	$lientheme = $bdd->query('SELECT * FROM theme'); //affichage des themes present dans la BDD
+	while ($donnees = $lientheme->fetch())
+		{
+		$lien = $donnees['lien'];
+		echo ('<option value=" ' . $lien . '">' . $donnees['titre'] . '</option>');
+		}
 
 ?>
 		</select>	<br />
 	<p class="link-chapitre-titre">Lien vers Chapitre :</p>
 		  	<select class="link-chapitre" name="liencours2">
 	  <?php
-$lien = $bdd->query('SELECT * FROM chapitre'); //affichage des themes present dans la BDD
-
-while ($donnees = $lien->fetch())
-	{
-	$liens = $donnees['lienchapitre'];
-	echo ('<option value=" ' . $liens . '">' . $donnees['titre'] . '</option>');
-	}
+	$lien = $bdd->query('SELECT * FROM chapitre'); //affichage des themes present dans la BDD
+	while ($donnees = $lien->fetch())
+		{
+		$liens = $donnees['lienchapitre'];
+		echo ('<option value=" ' . $liens . '">' . $donnees['titre'] . '</option>');
+		}
 
 ?>
 		</select>
@@ -164,6 +167,6 @@ while ($donnees = $lien->fetch())
 
 <?php
 
-
+}
 
 ?>
