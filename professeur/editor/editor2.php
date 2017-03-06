@@ -8,16 +8,17 @@
 
   <meta name="robots" content="noindex">
 
-  <link rel='stylesheet prefetch' href='http://netdna.bootstrapcdn.com/bootstrap/3.0.1/css/bootstrap.min.css'>
+<link rel='stylesheet prefetch' href='http://netdna.bootstrapcdn.com/bootstrap/3.0.1/css/bootstrap.min.css'>
 <link rel='stylesheet prefetch' href='http://netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.min.css'>
 <link rel="stylesheet" type="text/css" href="../../css/editeur.css">
 
 </head>
 
 <body>
-	<h1 style="text-align: center">ADMIN</h1>
-<a href="../cours.php"> <p style="text-align: left">Organisation des cours</p> </a>
-<a href="editor/editor2.php"> <p style="text-align: left">Redaction d'un cours</p></a><br><br><br>
+
+<header class="header">
+<a href="../index.php"><img src="../../img/house.svg" alt="" class="iconhome"></a>
+</header>
 
 
 
