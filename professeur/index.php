@@ -71,7 +71,7 @@ include 'traitement/bdd.php';
 		echo ('<p class="nom-chapitre">' . $donnees['titre'] . '</p>');
 		echo ('<br />');
 		echo ('<a class="img-edit" href="" ><img src="../img/edit.svg" class="img-edit" alt=""></a>');
-		echo ('<a class="img-remove" href="traitement/delect/SupressionTheme.php?id=' . $id . '" ><img src="../img/remove.svg" class="img-remove" alt=""></a>');
+		echo ('<a class="img-remove" href="traitement/delect/SupressionChapitre.php?id=' . $id . '" ><img src="../img/remove.svg" class="img-remove" alt=""></a>');
 		echo ('<br />');
 		}
 
@@ -118,7 +118,7 @@ include 'traitement/bdd.php';
 		echo ('<p class="nom-cours">' . $donnees['titre'] . '</p>');
 		echo ('<br />');
 		echo ('<a class="img-edit" href="" ><img src="../img/edit-black.svg" class="img-edit" alt=""></a>');
-		echo ('<a class="img-remove" href="traitement/delect/SupressionTheme.php?id=' . $id . '" ><img src="../img/remove-black.svg" class="img-remove" alt=""></a>');
+		echo ('<a class="img-remove" href="traitement/delect/SupressionCours.php?id=' . $id . '" ><img src="../img/remove-black.svg" class="img-remove" alt=""></a>');
 		echo ('<br />');
 		}
 
