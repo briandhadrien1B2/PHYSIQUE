@@ -60,12 +60,14 @@ li {
     width: 33.33%;
     color: white;
     height: 87.3vh;
+    overflow: scroll;
 }
 
 #txtHintt {
     background-color: #F5F7F9;
     width: 33.33%;
     height: 87.3vh;
+    overflow: scroll;
 }
 
 .titre {
@@ -163,17 +165,17 @@ li {
 .ajout-theme input[type="text"]::-webkit-input-placeholder {
 color: white !important;
 }
- 
+
 .ajout-theme input[type="text"]:-moz-placeholder { /* Firefox 18- */
-color: white !important;  
+color: white !important;
 }
- 
+
 .ajout-theme input[type="text"]::-moz-placeholder {  /* Firefox 19+ */
-color: white !important;  
+color: white !important;
 }
- 
-.ajout-theme input[type="text"]:-ms-input-placeholder {  
-color: white !important;  
+
+.ajout-theme input[type="text"]:-ms-input-placeholder {
+color: white !important;
 }
 
 
@@ -210,17 +212,17 @@ color: white !important;
 .ajout-chapitre input[type="text"]::-webkit-input-placeholder {
 color: white !important;
 }
- 
+
 .ajout-chapitre input[type="text"]:-moz-placeholder { /* Firefox 18- */
-color: white !important;  
+color: white !important;
 }
- 
+
 .ajout-chapitre input[type="text"]::-moz-placeholder {  /* Firefox 19+ */
-color: white !important;  
+color: white !important;
 }
- 
-.ajout-chapitre input[type="text"]:-ms-input-placeholder {  
-color: white !important;  
+
+.ajout-chapitre input[type="text"]:-ms-input-placeholder {
+color: white !important;
 }
 
 
@@ -231,17 +233,17 @@ color: white !important;
 .ajout-cours input[type="text"]::-webkit-input-placeholder {
 color: black !important;
 }
- 
+
 .ajout-cours input[type="text"]:-moz-placeholder { /* Firefox 18- */
-color: black !important;  
+color: black !important;
 }
- 
+
 .ajout-cours input[type="text"]::-moz-placeholder {  /* Firefox 19+ */
-color: black !important;  
+color: black !important;
 }
- 
-.ajout-cours input[type="text"]:-ms-input-placeholder {  
-color: black !important;  
+
+.ajout-cours input[type="text"]:-ms-input-placeholder {
+color: black !important;
 }
 
 

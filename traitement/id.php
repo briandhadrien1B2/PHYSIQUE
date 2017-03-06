@@ -1,7 +1,4 @@
 <?php
-include '../bdd.php';
-
-
 // Génération d'une chaine aléatoire
 function chaine_aleatoire($nb_car, $chaine = '123456789')
 {
@@ -14,13 +11,20 @@ $car = $chaine[$pos];
 $generation .= $car;
 } return $generation;
 }
-$id = chaine_aleatoire(9);
+$id = chaine_aleatoire(10);
 
 
+//test de doublon
 
-$req = $bdd->prepare('INSERT INTO cours (id, titre, lien, liencours,url) VALUES(?,?,?,?,?)');
-$req->execute(array(NULL,$_POST['titre'] ,$_POST['lien'],$_POST['liencours2'] ,$id ));
+include('bdd.php');
 
-header('Location: ../../index.php');
+    $sql = $bdd->prepare('SELECT id FROM utilisateurs WHERE invitation = ?');
+    $sql->execute(array($invitation0));
+    $res = $sql->fetch();
+
+    while($res)
+    {
+        $invitation0 = chaine_aleatoire(6);
+ }
 
 ?>

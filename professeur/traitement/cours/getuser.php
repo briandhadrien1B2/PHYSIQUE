@@ -25,13 +25,14 @@ while ($row = mysqli_fetch_array($result))
 	echo ('<li class="titre" style:"display : " name="users" onclick="showUser2(this.value)" value=" ' . $row['lienchapitre'] . ' ">' . $row['titre'] . '</li>');
 	echo ('<br />');
 	echo ('<a class="img-edit" href="" ><img src="../img/edit.svg" class="img-edit" alt=""></a>');
-	echo ('<a class="img-remove" href="traitement/delect/SupressionTheme.php?id=' . $row['id'] . '" ><img src="../img/remove.svg" class="img-remove" alt=""></a>');
+	echo ('<a class="img-remove" href="traitement/delect/SupressionChapitre.php?id=' . $row['id'] . '" ><img src="../img/remove.svg" class="img-remove" alt=""></a>');
 	}
 
 echo "</ul>";
 $e = 0;
 echo "</form><ul>";
-echo '<form action="traitement/add/ajoutchapitre.php" method="post" class="ajout-chapitre">
+echo '<hr width="50%" color="white">
+<form action="traitement/add/ajoutchapitre.php" method="post" class="ajout-chapitre">
 	<input type="text" name="titre" placeholder="Titre" class="input-titre">
 	<br />
 	  <p class="link-theme-titre">Lien vers theme :</p>';
@@ -45,9 +46,6 @@ while ($donnees = $lientheme->fetch())
 	echo ('<option value=" ' . $lien . '">' . $donnees['titre'] . '</option>');
 	}
 	echo '</select><br />';
-	echo '<p class="id-cours">Id des cours :</p>';
-	echo '<input type="text" name="lienchapitre" placeholder="Id cours" class="idtext">';
-	echo '<br />';
 	echo '<br />';
 	echo '<input class="submit" type="submit" value="Créer le Chapitre">';
 	echo '</form>';

@@ -24,24 +24,20 @@ echo "<form><ul>";
 
 while ($row = mysqli_fetch_array($result))
 {
-	echo ('<li class="titre" style:"display : " name="users" onclick="showUser3(this.value)" value=" ' . $row['url'] . ' ">' . $row['titre'] . '</li>');
+	echo ('<a href="editor/' .$e . '.html" target="_blank"><li class="titre" style:"display : " name="users" /* onclick="window.open(this.value) */" value=" ' . $row['url'] . ' ">' . $row['titre'] . '</li></a>');
 	echo ('<br />');
 	echo ('<a class="img-edit" href="" ><img src="../img/edit-black.svg" class="img-edit" alt=""></a>');
-	echo ('<a class="img-remove" href="traitement/delect/SupressionTheme.php?id=' . $row['id'] . '" ><img src="../img/remove-black.svg" class="img-remove" alt=""></a>');
+	echo ('<a class="img-remove" href="traitement/delect/SupressionCours.php?id=' . $row['id'] . '" ><img src="../img/remove-black.svg" class="img-remove" alt=""></a>');
 }
 
 echo "</ul>";
 $e = 0;
 echo "</form><ul>";
-echo '<form action="traitement/add/ajoutcours.php" method="post">
+echo '<hr width="50%" color="black">
+ <form action="traitement/add/ajoutcours.php" method="post">
 	<input type="text" name="titre" placeholder="Titre" class="input-titre-cours">
 	<br />
 	  <p class="link-theme-titre">Lien du Theme : </p>';
-
-
-
-
-
 
 
 
@@ -61,14 +57,6 @@ echo '</select>	<br />';
 
 
 
-
-
-
-
-
-
-
-
 echo '<p class="link-chapitre-titre">Lien vers Chapitre :</p>
 <select class="link-chapitre" name="liencours2">';
 
@@ -81,16 +69,6 @@ while ($donnees = $lien->fetch())
 }
 
 echo '</select><br />
-
-
-
-
-
-
-
- <p class="url">URL du cours :</p>
-	<input type="text" name="url" placeholder="URL ICI" class="urltext">
-	<br />
 	<input class="submit-cours" type="submit" value="Créer le cours">
 </form>';
 mysqli_close($con);

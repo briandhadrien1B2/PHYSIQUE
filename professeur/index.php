@@ -7,6 +7,13 @@ include 'traitement/bdd.php';
 	<link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="../css/admin.css">
 <head>
+
+<style>
+	html,body{
+		font-family: 'Dosis', sans-serif;
+	}
+	</style>
+
 <script>
 
 
@@ -109,10 +116,9 @@ while ($donnees = $reponse->fetch()) {
 
 
 </form>
+<hr width="50%" color="white">
 <form action="traitement/add/ajoutTheme.php" method="post" class="ajout-theme">
 	<input type="text" name="titre" placeholder="Titre" class="input-titre">
-	<br />
-	<input type="text" name="lien" placeholder="Lien du Thème" class="input-lien">
 	<br />
 	<input class="submit" type="submit" value="Créer le Theme">
 </form>
