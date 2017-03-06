@@ -14,7 +14,7 @@ $myfile = fopen( $url . '.html', "w") or die("Unable to open file!");
 $txt = "<!DOCTYPE html>
 <html>
 <head>
-<title>MathJax TeX Test Page</title>
+<title> $titre </title>
 <script type='text/x-mathjax-config'>
   MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
 </script>

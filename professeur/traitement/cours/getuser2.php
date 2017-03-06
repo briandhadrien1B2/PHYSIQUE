@@ -24,7 +24,7 @@ echo "<form><ul>";
 
 while ($row = mysqli_fetch_array($result))
 {
-	echo ('<a href="editor/' .$e . '.html" target="_blank"><li class="titre" style:"display : " name="users" /* onclick="window.open(this.value) */" value=" ' . $row['url'] . ' ">' . $row['titre'] . '</li></a>');
+	echo ('<a href="editor/ ' .$row['url'] . '.html" target="_blank"><li class="titre" style:"display : " name="users" /* onclick="window.open(this.value) */" value=" ' . $row['url'] . ' ">' . $row['titre'] . '</li></a>');
 	echo ('<br />');
 	echo ('<a class="img-edit" href="" ><img src="../img/edit-black.svg" class="img-edit" alt=""></a>');
 	echo ('<a class="img-remove" href="traitement/delect/SupressionCours.php?id=' . $row['id'] . '" ><img src="../img/remove-black.svg" class="img-remove" alt=""></a>');
