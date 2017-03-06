@@ -12,6 +12,10 @@ header {
     display: flex;
 }
 
+li {
+    list-style: none;
+}
+
 
 
 
@@ -38,24 +42,30 @@ header {
     display: flex;
     width: 100%;
     height: auto;
+
 }
 
 #colonne1 {
     background-color: #3D4859;
     width: 33.33%;
     color: white;
+    min-height: 87.3vh;
+    max-height: 87.3vh;
+    overflow: scroll;
 
 }
 
-#centre {
+#txtHint {
     background-color: #49576C;
     width: 33.33%;
     color: white;
+    height: 87.3vh;
 }
 
-#colonne2 {
+#txtHintt {
     background-color: #F5F7F9;
     width: 33.33%;
+    height: 87.3vh;
 }
 
 .titre {
@@ -63,6 +73,8 @@ header {
     height: auto;
     text-align: center;
     text-transform: uppercase;
+    margin-top: 10%;
+    text-decoration: underline;
 }
 
 .titre2 {
@@ -138,7 +150,7 @@ header {
     width: 30px;
     height: 20px;
     margin-left: 20%;
-    margin-top: 2%;
+    margin-top: 0%;
 }
 
 .img-remove {

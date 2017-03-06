@@ -22,7 +22,7 @@ echo "<form><ul>";
 
 while ($row = mysqli_fetch_array($result))
 	{
-	echo ('<li style:"display : " name="users" onclick="showUser2(this.value)" value=" ' . $row['lienchapitre'] . ' ">' . $row['titre'] . '</li>');
+	echo ('<li class="titre" style:"display : " name="users" onclick="showUser2(this.value)" value=" ' . $row['lienchapitre'] . ' ">' . $row['titre'] . '</li>');
 	echo ('<br />');
 	echo ('<a class="img-edit" href="" ><img src="../img/edit.svg" class="img-edit" alt=""></a>');
 	echo ('<a class="img-remove" href="traitement/delect/SupressionTheme.php?id=' . $row['id'] . '" ><img src="../img/remove.svg" class="img-remove" alt=""></a>');

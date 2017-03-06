@@ -99,10 +99,9 @@ function showUser3(strrr) {
 <?php
 
 $reponse = $bdd->query('SELECT * FROM theme');
-while ($donnees = $reponse->fetch())
-{
-	echo('<li id="mdr" name="users" onclick="showUser(this.value)" value="' . $donnees['lien'] . '">' . $donnees['titre'] . '</li>' );
-	echo('<br>');
+while ($donnees = $reponse->fetch()) {
+	echo('<li class="titre" id="mdr" name="users" onclick="showUser(this.value)" value="' . $donnees['lien'] . '">' . $donnees['titre'] . '</li>' );
+	echo('<br />');
 	echo ('<a class="img-edit" href="" ><img src="../img/edit.svg" class="img-edit" alt=""></a>');
 	echo ('<a class="img-remove" href="traitement/delect/SupressionTheme.php?id=' . $donnees['id'] . '" ><img src="../img/remove.svg" class="img-remove" alt=""></a>');
 }
