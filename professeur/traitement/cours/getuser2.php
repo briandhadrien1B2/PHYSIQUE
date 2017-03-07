@@ -33,7 +33,7 @@ while ($row = mysqli_fetch_array($result))
 echo "</ul>";
 $e = 0;
 echo "</form><ul>";
-echo '<hr width="50%" color="black">
+echo '
  <form action="traitement/add/ajoutcours.php" method="post">
 	<input type="text" name="titre" placeholder="Titre" class="input-titre-cours">
 	<br />

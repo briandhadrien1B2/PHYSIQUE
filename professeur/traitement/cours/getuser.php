@@ -31,7 +31,7 @@ while ($row = mysqli_fetch_array($result))
 echo "</ul>";
 $e = 0;
 echo "</form><ul>";
-echo '<hr width="50%" color="white">
+  echo '
 <form action="traitement/add/ajoutchapitre.php" method="post" class="ajout-chapitre">
 	<input type="text" name="titre" placeholder="Titre" class="input-titre">
 	<br />
