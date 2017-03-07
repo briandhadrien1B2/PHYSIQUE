@@ -14,6 +14,7 @@ $myfile = fopen( $url . '.html', "w") or die("Unable to open file!");
 $txt = "<!DOCTYPE html>
 <html>
 <head>
+<link href='Sans%20titre.css' rel='stylesheet'>
 <title> $titre </title>
 <script type='text/x-mathjax-config'>
   MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
@@ -37,5 +38,5 @@ fclose($myfile);
 ECHO $url;
 $req = $bdd->prepare('INSERT INTO court (id, titre, contenue, urlcourt) VALUES(?,?,?,?)');
 $req->execute(array(NULL,$titre ,$cours, $url));
-header('Location: ../cours.php');
+header('Location: ../../index.php');
 ?>

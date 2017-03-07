@@ -1,4 +1,10 @@
 <?php
+session_start();
+$pseudo = $_SESSION['pseudo'];
+if($pseudo == "admin"){
+
+
+
 include 'traitement/bdd.php';
 ?>
 <!DOCTYPE html>
@@ -137,3 +143,9 @@ while ($donnees = $reponse->fetch()) {
 
 </body>
 </html>
+<?php
+}
+else{
+	echo("non desolé");
+}
+	?>

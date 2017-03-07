@@ -28,7 +28,7 @@ if ($pseudolenght <= 255)
 		{
 		session_start();
 		$_SESSION['pseudo'] = $pseudo;
-		header('Location: ../eleve/index.php');
+		header('Location: ../eleve2/index.php');
 		}
 
 	// SI LE COUPLE PSEUDO ET MOT DE PASSE N'EST PAS COORECT ON VÉRIFIE QU'IL NE S'AGISSE PAS DES IDENTIFIANTS ADMINS

@@ -2,9 +2,9 @@
 // ON LINK LA BDD
 include 'bdd.php';
 
-// ON VERIFIE SI TOUS LES CHAMPS ON ÉTÉ REMPLIS, SI C'EST LE CAS ON ENTRE DANS LES VÉRIFICATIONS PLUS AVANCÉES  
-if (!empty($_POST['nom']) AND !empty($_POST['prenom']) AND !empty($_POST['mail']) AND !empty($_POST['pseudo']) AND !empty($_POST['password']) AND !empty($_POST['password2']) AND !empty($_POST['classe'])) { 
-// ON RÉCUPÈRE LES VALEURS DU FORMULAIRE DANS DES VARIABLES 
+// ON VERIFIE SI TOUS LES CHAMPS ON ÉTÉ REMPLIS, SI C'EST LE CAS ON ENTRE DANS LES VÉRIFICATIONS PLUS AVANCÉES
+if (!empty($_POST['nom']) AND !empty($_POST['prenom']) AND !empty($_POST['mail']) AND !empty($_POST['pseudo']) AND !empty($_POST['password']) AND !empty($_POST['password2']) AND !empty($_POST['classe'])) {
+// ON RÉCUPÈRE LES VALEURS DU FORMULAIRE DANS DES VARIABLES
 	$nom = htmlspecialchars($_POST['nom']);
 	$prenom = htmlspecialchars($_POST['prenom']);
 	$mail = htmlspecialchars($_POST['mail']);
@@ -12,18 +12,18 @@ if (!empty($_POST['nom']) AND !empty($_POST['prenom']) AND !empty($_POST['mail']
 	$password = htmlspecialchars($_POST['password']);
 	$password2 = htmlspecialchars($_POST['password2']);
 
-// ON VÉRIFIE QUE LE NOM NE DÉPASSE PAS 255 CARACTÈRES, SI C'EST LE CAS ON PASSE À LA VÉRIFICATION SUIVANTE SINON ON AFFICHE UN MESSAGE D'ERREUR 
+// ON VÉRIFIE QUE LE NOM NE DÉPASSE PAS 255 CARACTÈRES, SI C'EST LE CAS ON PASSE À LA VÉRIFICATION SUIVANTE SINON ON AFFICHE UN MESSAGE D'ERREUR
 		$nomlenght = strlen($nom);
 		if ($nomlenght <= 255) {
-// ON VÉRIFIE QUE LE PRÉNOM NE DÉPASSE PAS 255 CARACTÈRES, SI C'EST LE CAS ON PASSE À LA VÉRIFICATION SUIVANTE SINON ON AFFICHE UN MESSAGE D'ERREUR 
-		
+// ON VÉRIFIE QUE LE PRÉNOM NE DÉPASSE PAS 255 CARACTÈRES, SI C'EST LE CAS ON PASSE À LA VÉRIFICATION SUIVANTE SINON ON AFFICHE UN MESSAGE D'ERREUR
+
 		$prenomlenght = strlen($prenom);
 		if ($prenomlenght <= 255) {
-// ON VÉRIFIE QUE LE PSEUDO NE DÉPASSE PAS 255 CARACTÈRES, SI C'EST LE CAS ON PASSE À LA VÉRIFICATION SUIVANTE SINON ON AFFICHE UN MESSAGE D'ERREUR 
-		
+// ON VÉRIFIE QUE LE PSEUDO NE DÉPASSE PAS 255 CARACTÈRES, SI C'EST LE CAS ON PASSE À LA VÉRIFICATION SUIVANTE SINON ON AFFICHE UN MESSAGE D'ERREUR
+
 		$pseudolenght = strlen($pseudo);
 		if ($pseudolenght <= 255) {
-// ON VÉRIFIE QUE LE MOT DE PASSE ET QUE LA CONFIRMATION DE MOT DE PASSE CORRESPONDENT, SI C'EST LE CAS ON PASSE À LA VÉRIFICATION SUIVANTE SINON ON AFFICHE UN MESSAGE D'ERREUR 
+// ON VÉRIFIE QUE LE MOT DE PASSE ET QUE LA CONFIRMATION DE MOT DE PASSE CORRESPONDENT, SI C'EST LE CAS ON PASSE À LA VÉRIFICATION SUIVANTE SINON ON AFFICHE UN MESSAGE D'ERREUR
 
 			if ($password == $password2) {
 					$password = sha1($_POST['password']); // CRYPTAGE DU MOT DE PASSE DANS LA BDD AVEC LE SHA1
@@ -39,19 +39,19 @@ if (!empty($_POST['nom']) AND !empty($_POST['prenom']) AND !empty($_POST['mail']
 
     				$mailcheck = $bdd->query('SELECT mail FROM eleve WHERE mail = \''.$mail.'\' ;');
     				$ress = $mailcheck->fetch();
- 					// SI L'ADRESSE MAIL EST DÉJÀ UTILISÉE ON AFFICHE CE MESSAGE D'ERREUR 
+ 					// SI L'ADRESSE MAIL EST DÉJÀ UTILISÉE ON AFFICHE CE MESSAGE D'ERREUR
    					 if ($ress) {
      					   echo ("Ce mail est déjà utilisé");
    								 }
    					// SI ILS N'Y A PAS D'ERREUR ALORS ON AJOUTE LES INFORMATIONS À LA BASE DE DONNÉE ET VALIDE L'INSCRIPTION
     					else {
-   						     
 
-// REQUÊTE SQL PERMETTANT D'INSÉRER LES INFORMATIONS DANS LA BASE DE DONNÉE 
+
+// REQUÊTE SQL PERMETTANT D'INSÉRER LES INFORMATIONS DANS LA BASE DE DONNÉE
 $req = $bdd->prepare('INSERT INTO eleve (id, nom, prenom, mail, pseudo, password,classe) VALUES(?,?,?,?,?,?,?)');
 $req->execute(array(NULL,$_POST['nom'] ,$_POST['prenom'], $_POST['mail'], $_POST['pseudo'], $password, $_POST['classe']));
-// ON REDIRIGE DONC VERS LA PAGE DE COURS DU SITE 
-header('Location: ../eleve/index.php');
+// ON REDIRIGE DONC VERS LA PAGE DE COURS DU SITE
+header('Location: ../eleve2/index.php');
 
 }
 
@@ -61,13 +61,13 @@ header('Location: ../eleve/index.php');
 
 									// MESSAGE EN CAS D'ERREUR SUR LA CONFIRMATION DE MOT DE PASSE
 									else { ?>
-									
+
 									<script language="javascript" type="text/javascript">
         								alert("Vos mots de passe ne correspondent pas !");
         								window.location = '../accueil.php';
     								</script>
 		<?php }
-			
+
 								  }
 
 								  // MESSAGE D'ERREUR SI LE PSEUDO DÉPASSE 255 CARACTÈRES
@@ -77,7 +77,7 @@ header('Location: ../eleve/index.php');
         									window.location = '../accueil.php';
     								</script>
 		<?php }
-								  
+
 								  }
 
 								 // MESSAGE D'ERREUR SI LE PRÉNOM DÉPASSE 255 CARACTÈRES
@@ -86,7 +86,7 @@ header('Location: ../eleve/index.php');
         								alert("Votre prénom ne doit pas dépasser 255 caractères");
         								window.location = '../accueil.php';
     								</script>
-		<?php }								
+		<?php }
 							   }
 
 							   // MESSAGE D'ERREUR SI LE NOM DÉPASSE 255 CARACTÈRES
@@ -95,7 +95,7 @@ header('Location: ../eleve/index.php');
         								alert("Votre nom ne doit pas dépasser 255 caractères");
         								window.location = '../accueil.php';
     							</script>
-			
+
 		<?php }
 }
 
@@ -109,7 +109,7 @@ else { ?>
 
 
 // BOUCLE PERMETTANT D'AFFICHER LES MESSAGES D'ERREURS
-//if (isset($erreur)) { 
+//if (isset($erreur)) {
 //	echo $erreur;
 //}
 
