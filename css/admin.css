@@ -12,11 +12,16 @@ header {
     display: flex;
 }
 
-li {
+li,ul {
     list-style: none;
+    cursor:pointer;
+
 }
 
 
+a{
+    cursor:pointer;
+}
 
 
 .iconhome {
@@ -271,28 +276,40 @@ color: black !important;
 
 .link-theme-titre {
     text-align: center;
+    cursor:pointer;
+
 }
 
 .link-chapitre-titre {
     text-align: center;
+    cursor:pointer;
+
 }
 
 .link-theme {
     margin-left: 37%;
+    cursor:pointer;
+
 }
 
 .link-chapitre {
     margin-left: 37%;
+    cursor:pointer;
+
 }
 
 .url {
     text-align: center;
+    cursor:pointer;
+
 }
 
 .urltext {
     margin-left: 37%;
     border: solid 1px black;
     height: 25px;
+    cursor:pointer;
+
 }
 
 
